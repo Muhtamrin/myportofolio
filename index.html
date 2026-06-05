@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhamad Tamrin | Portfolio</title>
+  
+  <!-- TAILWIND CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- STYLE TAMBAHAN UNTUK ANIMASI MENGETIK -->
+  <style>
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+    .typing-cursor {
+      border-right: 3px solid #22d3ee;
+      animation: blink 0.75s step-end infinite;
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-white font-sans antialiased scroll-smooth selection:bg-cyan-500 selection:text-slate-950">
+
+  <!-- NAVIGATION BAR -->
+  <nav class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-6 bg-slate-950/70 backdrop-blur-md border-b border-slate-800/60">
+    <div class="text-xl font-bold tracking-wider text-cyan-400 cursor-pointer hover:scale-105 transition duration-300">Tamrin.Dev</div>
+    <div class="space-x-4 md:space-x-6">
+      <a href="#about" class="text-sm md:text-base text-slate-300 hover:text-cyan-400 transition-colors duration-300 relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-[2px] after:bg-cyan-400 hover:after:w-full after:transition-all after:duration-300">About</a>
+      <a href="#tech" class="text-sm md:text-base text-slate-300 hover:text-cyan-400 transition-colors duration-300 relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-[2px] after:bg-cyan-400 hover:after:w-full after:transition-all after:duration-300">Skills</a>
+      <a href="#projects" class="text-sm md:text-base text-slate-300 hover:text-cyan-400 transition-colors duration-300 relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-[2px] after:bg-cyan-400 hover:after:w-full after:transition-all after:duration-300">Projects</a>
+      <a href="#documents" class="text-sm md:text-base text-slate-300 hover:text-cyan-400 transition-colors duration-300 relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-[2px] after:bg-cyan-400 hover:after:w-full after:transition-all after:duration-300">Certificates & CV</a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION (Foto di Kiri, Teks di Kanan) -->
+  <section id="about" class="relative min-h-screen flex items-center justify-center px-6 pt-24 pb-12 bg-cover bg-center bg-no-repeat" style="background-image: url('bg-coding.png');">
+    
+    <!-- Lapisan Hitam Transparan -->
+    <div class="absolute inset-0 bg-slate-950/90 z-10"></div>
+
+    <!-- Konten Utama (Grid Layout) -->
+    <div class="relative z-20 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center w-full">
+      
+      <!-- SISI KIRI: Foto Profil (Sudah Dibuang Transparannya Agar Muncul Instan) -->
+      <div class="md:col-span-5 flex justify-center">
+        <div class="relative group max-w-[280px] sm:max-w-[320px] md:max-w-full aspect-[2/3] rounded-2xl overflow-hidden border border-slate-700/50 shadow-2xl shadow-cyan-500/10 hover:border-cyan-500/50 hover:shadow-cyan-500/20 transition-all duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent z-10 pointer-events-none"></div>
+          
+          <!-- Kamu bisa pakai file lokal lagi sekarang! -->
+          <img src="profile.png" alt="Muhamad Tamrin" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+        </div>
+      </div>
+
+      <!-- SISI KANAN: Teks Perkenalan -->
+      <div class="md:col-span-7 flex flex-col items-center md:items-start text-center md:text-left">
+        <h1 class="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-4 tracking-tight min-h-[50px] md:min-h-[90px] w-full">
+          Hi, I'm <span id="typing-text" class="text-cyan-400 typing-cursor"></span>
+        </h1>
+        <p class="text-base md:text-xl text-slate-300 max-w-2xl mb-8 leading-relaxed opacity-0 animate-[fadeIn_1s_ease-out_1.2s_forwards]">
+          Front-End Web Developer specialized in building scalable, high-performance web applications. Focused on clean code and seamless user experiences.
+        </p>
+        <div class="flex flex-wrap gap-4 opacity-0 animate-[fadeIn_1s_ease-out_1.6s_forwards]">
+          <a href="#projects" class="group relative bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold py-3 px-8 rounded-lg shadow-lg shadow-cyan-500/20 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-cyan-400/40">
+            <span class="absolute inset-0 rounded-lg bg-cyan-400 opacity-0 group-hover:animate-ping group-hover:opacity-20"></span>
+            View My Work
+          </a>
+          <a href="#documents" class="border border-slate-700 hover:border-cyan-400 text-slate-300 hover:text-cyan-400 font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center gap-2">
+            View Credentials
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TECH STACK SECTION -->
+  <section id="tech" class="py-20 bg-slate-900/40 border-t border-b border-slate-900 px-4">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12">
+        My <span class="text-cyan-400">Tech Stack</span>
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Front End -->
+        <div class="bg-slate-900/60 p-6 rounded-xl border border-slate-800/80 hover:border-cyan-500/40 hover:shadow-[0_0_20px_rgba(34,211,238,0.05)] transition-all duration-300 group">
+          <h3 class="text-xl font-bold text-cyan-400 mb-4 group-hover:translate-x-1 transition-transform">Front-End</h3>
+          <ul class="space-y-2 text-slate-300">
+            <li class="hover:text-white transition-colors">• HTML5 & CSS3</li>
+            <li class="hover:text-white transition-colors">• JavaScript (ES6+)</li>
+            <li class="hover:text-white transition-colors">• Tailwind CSS</li>
+            <li class="hover:text-white transition-colors">• React / Next.js</li>
+          </ul>
+        </div>
+        
+        <!-- Tools & DB -->
+        <div class="bg-slate-900/60 p-6 rounded-xl border border-slate-800/80 hover:border-cyan-500/40 hover:shadow-[0_0_20px_rgba(34,211,238,0.05)] transition-all duration-300 group">
+          <h3 class="text-xl font-bold text-cyan-400 mb-4 group-hover:translate-x-1 transition-transform">Tools & DB</h3>
+          <ul class="space-y-2 text-slate-300">
+            <li class="hover:text-white transition-colors">• MySQL / PostgreSQL</li>
+            <li class="hover:text-white transition-colors">• Git & GitHub</li>
+            <li class="hover:text-white transition-colors">• Postman</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION (Menu Project Mengarah ke GitHub Pages) -->
+  <section id="projects" class="py-20 px-4 max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-12">
+      Featured <span class="text-cyan-400">Projects</span>
+    </h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <!-- Project 1: Manajemen Gardu LKS -->
+      <div class="bg-slate-900/40 rounded-xl border border-slate-800/80 overflow-hidden hover:border-cyan-500/50 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] transition-all duration-500 group transform hover:-translate-y-2">
+        <div class="h-48 bg-slate-800 relative flex items-center justify-center text-slate-400 font-medium overflow-hidden">
+          <div class="absolute inset-0 bg-cyan-950/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+          <span class="group-hover:scale-110 group-hover:text-cyan-400 transition-all duration-500 z-20">⚡ Manajemen Gardu LKS</span>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2 group-hover:text-cyan-400 transition-colors duration-300">Manajemen Gardu LKS</h3>
+          <p class="text-slate-400 text-sm mb-4">A web-based application built to manage, monitor, and optimize electrical substation data efficiency.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="text-xs bg-slate-800 border border-slate-700 text-cyan-400 px-2.5 py-1 rounded-full">HTML5</span>
+            <span class="text-xs bg-slate-800 border border-slate-700 text-cyan-400 px-2.5 py-1 rounded-full">Tailwind CSS</span>
+            <span class="text-xs bg-slate-800 border border-slate-700 text-cyan-400 px-2.5 py-1 rounded-full">JavaScript</span>
+          </div>
+          <div class="flex space-x-4 text-sm font-semibold pt-2">
+            <a href="https://muhtamrin.github.io/manajemengardulks/" target="_blank" class="text-cyan-400 hover:text-cyan-300 hover:underline flex items-center gap-1 transition-colors">Live Demo <span class="transform group-hover:translate-x-1 transition-transform">→</span></a>
+            <a href="https://github.com/muhtamrin/manajemengardulks" target="_blank" class="text-slate-400 hover:text-white transition-colors duration-300">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2: Management Dashboard -->
+      <div class="bg-slate-900/40 rounded-xl border border-slate-800/80 overflow-hidden hover:border-cyan-500/50 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] transition-all duration-500 group transform hover:-translate-y-2">
+        <div class="h-48 bg-slate-800 relative flex items-center justify-center text-slate-400 font-medium overflow-hidden">
+          <div class="absolute inset-0 bg-cyan-950/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+          <span class="group-hover:scale-110 group-hover:text-cyan-400 transition-all duration-500 z-20">📊 Management Dashboard</span>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2 group-hover:text-cyan-400 transition-colors duration-300">Management Dashboard</h3>
+          <p class="text-slate-400 text-sm mb-4">An internal admin panel featuring real-time data visualization, charts, and user role management.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="text-xs bg-slate-800 border border-slate-700 text-cyan-400 px-2.5 py-1 rounded-full">React</span>
+            <span class="text-xs bg-slate-800 border border-slate-700 text-cyan-400 px-2.5 py-1 rounded-full">Tailwind</span>
+            <span class="text-xs bg-slate-800 border border-slate-700 text-cyan-400 px-2.5 py-1 rounded-full">JavaScript</span>
+          </div>
+          <div class="flex space-x-4 text-sm font-semibold pt-2">
+            <a href="#" class="text-cyan-400 hover:text-cyan-300 hover:underline flex items-center gap-1 transition-colors">Live Demo <span>→</span></a>
+            <a href="#" class="text-slate-400 hover:text-white transition-colors duration-300">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CERTIFICATES & CV SECTION (Silakan Ganti Tautan Google Drive Kamu di Sini) -->
+  <section id="documents" class="py-25 bg-slate-900/20 border-t border-slate-900 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">
+        Credentials & <span class="text-cyan-400">Documents</span>
+      </h2>
+      <p class="text-slate-400 max-w-xl mx-auto mb-12 text-sm md:text-base">
+        Akses dokumen resmi verifikasi keahlian profesional dan ringkasan riwayat karir saya.
+      </p>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Kotak CV -->
+        <div class="bg-slate-950 p-8 rounded-2xl border border-slate-800 flex flex-col justify-between items-center hover:border-cyan-500/30 transition-all duration-300">
+          <div class="mb-6">
+            <div class="w-16 h-16 bg-cyan-950/50 border border-cyan-500/20 text-cyan-400 flex items-center justify-center rounded-xl mx-auto mb-4 text-2xl">📄</div>
+            <h3 class="text-xl font-bold mb-2">Curriculum Vitae</h3>
+            <p class="text-slate-400 text-sm px-4">Riwayat kualifikasi profesional, pengalaman kerja, serta keahlian teknis terperinci.</p>
+          </div>
+          <a href="https://docs.google.com/document/d/1IDKRkIKQ1jPGT48cyYS2jQeerEqZhppPlA_7I2ngEyQ/edit?usp=drive_link" target="_blank" class="w-full text-center bg-slate-900 hover:bg-cyan-500 hover:text-slate-950 border border-slate-800 hover:border-cyan-500 text-slate-300 font-semibold py-3 px-6 rounded-lg transition-all duration-300">
+            View CV
+          </a>
+        </div>
+
+        <!-- Kotak Sertifikat 1 -->
+        <div class="bg-slate-950 p-8 rounded-2xl border border-slate-800 flex flex-col justify-between items-center hover:border-cyan-500/30 transition-all duration-300">
+          <div class="mb-6">
+            <div class="w-16 h-16 bg-cyan-950/50 border border-cyan-500/20 text-cyan-400 flex items-center justify-center rounded-xl mx-auto mb-4 text-2xl">📜</div>
+            <h3 class="text-xl font-bold mb-2">Certificates Collection</h3>
+            <p class="text-slate-400 text-sm px-4">Bundel sertifikasi kompetensi keahlian pemrograman web dan keikutsertaan proyek resmi.</p>
+          </div>
+          <a href="https://drive.google.com/file/d/1Hg3GzLSfTWWT7-_GF2bLqPxK4qF2rfRK/view?usp=drive_link" target="_blank" class="w-full text-center bg-slate-900 hover:bg-cyan-500 hover:text-slate-950 border border-slate-800 hover:border-cyan-500 text-slate-300 font-semibold py-3 px-6 rounded-lg transition-all duration-300">
+            View Certificates
+          </a>
+        </div>
+
+        <!-- Kotak Sertifikat 2 (BARU AMAN DITAMBAHKAN) -->
+        <div class="bg-slate-950 p-8 rounded-2xl border border-slate-800 flex flex-col justify-between items-center hover:border-cyan-500/30 transition-all duration-300">
+          <div class="mb-6">
+            <div class="w-16 h-16 bg-cyan-950/50 border border-cyan-500/20 text-cyan-400 flex items-center justify-center rounded-xl mx-auto mb-4 text-2xl">🎓</div>
+            <h3 class="text-xl font-bold mb-2">Additional Certificate</h3>
+            <p class="text-slate-400 text-sm px-4">Sertifikat kompetensi tambahan atau partisipasi dalam pelatihan teknologi spesifik.</p>
+          </div>
+          <!-- Masukkan link Google Drive sertifikat barumu di href di bawah ini -->
+          <a href="https://drive.google.com/file/d/1D7swXZK-PfMK00ecO2HgKRTgskRCAwhm/view?usp=drive_link" target="_blank" class="w-full text-center bg-slate-900 hover:bg-cyan-500 hover:text-slate-950 border border-slate-800 hover:border-cyan-500 text-slate-300 font-semibold py-3 px-6 rounded-lg transition-all duration-300">
+            View Certificate
+          </a>
+        </div>
+      </div>
+        </div>
+  </section>
+
+  <!-- JAVASCRIPT UNTUK EFEK MENGETIK -->
+  <script>
+    const textArr = ["Muhamad Tamrin.", "a Web Programmer.", "a Front-End Developer."];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typingSpeed = 100;
+    const erasingSpeed = 50;
+    const delayBetweenWords = 1000;
+    const textElement = document.getElementById("typing-text");
+
+    function type() {
+      const currentWord = textArr[wordIndex];
+      
+      if (isDeleting) {
+        textElement.textContent = currentWord.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        textElement.textContent = currentWord.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      if (!isDeleting && charIndex === currentWord.length) {
+        isDeleting = true;
+        setTimeout(type, delayBetweenWords);
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % textArr.length;
+        setTimeout(type, 500);
+      } else {
+        setTimeout(type, isDeleting ? erasingSpeed : typingSpeed);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      setTimeout(type, 500);
+    });
+  </script>
+
+</body>
+</html>
